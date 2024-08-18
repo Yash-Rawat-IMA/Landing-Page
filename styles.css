@@ -1,0 +1,328 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+    background-image: url('https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2');
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    background-image: url('https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateZ(-100px) rotateX(-10deg);
+    opacity: 0;
+    animation: comeIn 1s ease-out forwards;
+}
+
+@keyframes comeIn {
+    0% {
+        transform: translateZ(-100px) rotateX(-10deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0) rotateX(0deg);
+        opacity: 1;
+    }
+}
+h1, h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    border: 2px black solid;
+    border-radius: 30px;
+    background-color: #632f1e;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-size: large;
+    font-weight: bold;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+.header {
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.494);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #3f645c;
+    color: #b3e3fff0;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #16370297;
+    transform: translateY(-3px);
+}
+
+.features, .testimonials, .lead-capture, .social{
+    padding: 60px 20px;
+    background-color: #f0d2ad95;
+    margin: 20px 0;
+    box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    opacity: 0.7;
+}
+.features:hover, .testimonials:hover, .lead-capture:hover, .social:hover{
+    padding: 60px 20px;
+    background-color: #80470195;
+    margin: 20px 0;
+    box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    opacity: 1;
+    transition: transform 0.1s;
+    animation: float 2s ease-in-out infinite;
+    z-index: 500;
+}
+
+
+.feat{
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.icon {
+    background-color: rgba(250, 207, 207, 0.9);
+    border-radius: 50%;
+    padding: 15px;
+    transition: transform 0.3s;
+    animation: float 3s ease-in-out infinite;
+    font-size: 1.5rem;
+    color: #80470195;
+    opacity: 0.9;
+}
+.icon:hover {
+    transform: scale(1.1) translateZ(0);
+    background-color: #f1d3ae95;
+    opacity: 0.5;
+}
+.fb:hover,.tw:hover,.lin:hover{
+    color: rgb(34, 154, 194);
+}
+.ig:hover{
+    color: #E1306C;
+    background-color: black;
+}
+.gh:hover{
+    color:#24292e;
+    background-color: #f1d3ae95;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ffffffb2;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.lead-capture form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lead-capture input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #013253;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.lead-capture button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.lead-capture button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.footer {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/021/495/590/non_2x/3d-magnifying-glass-icon-illustration-png.png');
+    font-weight: bolder;
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    opacity: 0.3;
+    z-index: 1000;
+}
+.footer:hover{
+    opacity: 1;
+}
+
+.footer-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-link {
+    display: block;
+    margin: 5px 0;
+    color: #000000b3;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #008ecab8;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+    }
+
+    .lead-capture form {
+        flex-direction: column;
+    }
+
+    .lead-capture input[type="email"],
+    .lead-capture button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .footer {
+        background-size: cover;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
